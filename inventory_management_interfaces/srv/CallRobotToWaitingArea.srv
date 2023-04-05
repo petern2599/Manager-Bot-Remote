@@ -1,0 +1,5 @@
+string user_number
+string[] queue
+---
+string selected_robot
+int64 waiting_area_number

@@ -87,8 +87,6 @@ class RobotCallerServerNode(Node):
         response.waiting_area_number = self.get_waiting_area_number()
         return response
 
-
-    
 def main(args=None):
     rclpy.init(args=args)
     node = RobotCallerServerNode("robot_caller_server")

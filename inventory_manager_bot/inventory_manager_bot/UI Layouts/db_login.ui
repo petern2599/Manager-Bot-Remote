@@ -35,7 +35,7 @@
       <x>10</x>
       <y>90</y>
       <width>381</width>
-      <height>146</height>
+      <height>151</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -240,6 +240,11 @@
       <height>13</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
     </property>
@@ -255,7 +260,7 @@
      <rect>
       <x>150</x>
       <y>30</y>
-      <width>201</width>
+      <width>211</width>
       <height>41</height>
      </rect>
     </property>

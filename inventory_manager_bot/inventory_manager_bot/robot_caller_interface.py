@@ -8,13 +8,14 @@ import rclpy
 from rclpy.node import Node
 from inventory_management_interfaces.srv import CallRobotToWaitingArea
 from inventory_manager_bot.robot_caller_client import RobotCallerClientNode
+import os
 
 class RobotCallerUI(QMainWindow):
     def __init__(self):
         #initialize UI
         super(RobotCallerUI,self).__init__()
         #Load UI file
-        uic.loadUi("/home/petern25/ros2_ws/src/inventory_manager_bot/inventory_manager_bot/UI Layouts/robot_caller.ui",self)
+        uic.loadUi(os.getcwd()+"/src/inventory_manager_bot/inventory_manager_bot/UI Layouts/robot_caller.ui",self)
         #Show applicaiton
         self.show()
         
@@ -51,6 +52,7 @@ class RobotCallerUI(QMainWindow):
             self.login_window.hide()
         except Exception as e:
             self.conn = None
+            message = QMessageBox()
             message.setText("Could not connect to database!\n" + \
                             str(e))
             message.setWindowTitle("Connection Message")

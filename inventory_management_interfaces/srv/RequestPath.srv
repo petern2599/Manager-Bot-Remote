@@ -1,0 +1,8 @@
+float x_init
+float y_init
+float x_goal
+float y_goal
+---
+string is_successful
+float[] x_waypoints
+float[] y_waypoints

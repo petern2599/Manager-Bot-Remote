@@ -20,19 +20,17 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "image_publisher = inventory_manager_bot.image_publisher:main",
-            "image_subscriber = inventory_manager_bot.image_subscriber:main",
             "robot_caller_server = inventory_manager_bot.robot_caller_server:main",
             "robot_caller_client = inventory_manager_bot.robot_caller_interface:main",
             "keyboard_teleop = inventory_manager_bot.keyboard_teleop:main",
             "serial_logger = inventory_manager_bot.serial_logger:main",
             "label_reader = inventory_manager_bot.label_reader:main",
             "inventory_validator = inventory_manager_bot.inventory_validator:main",
-            "state_monitor = inventory_manager_bot.state_monitor:main",
             "static_broadcaster = inventory_manager_bot.static_broadcaster:main",
             "odom_broadcaster = inventory_manager_bot.transform_broadcaster:main",
             "map_transform = inventory_manager_bot.map_transform_listener:main",
-            "map_recorder = inventory_manager_bot.map_recorder:main"
+            "map_recorder = inventory_manager_bot.map_recorder:main",
+            "path_planner_server = inventory_manager_bot.path_planner_server:main"
         ],
     },
 )

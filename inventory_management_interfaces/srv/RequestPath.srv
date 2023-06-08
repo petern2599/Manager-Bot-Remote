@@ -1,8 +1,8 @@
-float x_init
-float y_init
-float x_goal
-float y_goal
+float64 x_init
+float64 y_init
+float64 x_goal
+float64 y_goal
 ---
 string is_successful
-float[] x_waypoints
-float[] y_waypoints
+float64[] x_waypoints
+float64[] y_waypoints

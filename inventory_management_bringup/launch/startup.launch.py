@@ -28,8 +28,19 @@ def generate_launch_description():
             {"db":"inventory"}
         ]
     )
-    
+    path_planner_server_node = Node(
+        package = "inventory_manager_bot",
+        executable = "path_planner_server",
+        output = "screen",
+        emulate_tty = True,
+        parameters=[
+            {"map":"/home/petern25/ros2_ws/my_map_save.pgm"}
+        ]
+    )
+
+
     ld.add_action(inventory_validator_node)
     ld.add_action(robot_caller_server_node)
+    ld.add_action(path_planner_server_node)
     
     return ld

@@ -1,6 +1,4 @@
 import cv2
-import rclpy
-from rclpy.node import Node
 import numpy as np
 
 class MapRender():

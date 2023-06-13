@@ -51,7 +51,7 @@ class MapTransformListenerNode(Node):
 
             self.map_pos_publisher.publish(position)
             self.map_angle_publisher.publish(angle)
-
+            
             # print("x: {} | y: {} | heading : {}".format(round(translation_x,2),round(translation_y,2),round(heading,2)))
             
         except Exception as e:

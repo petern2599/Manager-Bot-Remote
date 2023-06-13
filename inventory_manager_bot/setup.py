@@ -30,7 +30,9 @@ setup(
             "odom_broadcaster = inventory_manager_bot.transform_broadcaster:main",
             "map_transform = inventory_manager_bot.map_transform_listener:main",
             "map_recorder = inventory_manager_bot.map_recorder:main",
-            "path_planner_server = inventory_manager_bot.path_planner_server:main"
+            "path_planner_server = inventory_manager_bot.path_planner_server:main",
+            "control_logger = inventory_manager_bot.controller_logger:main",
+            "waypoint_publisher = inventory_manager_bot.waypoint_publisher:main"
         ],
     },
 )

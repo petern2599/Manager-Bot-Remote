@@ -16,6 +16,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/DetectedLabels.msg"
   "srv/CallRobotToWaitingArea.srv"
   "srv/RequestPath.srv"
+  "msg/Waypoints.msg"
 )
 
 

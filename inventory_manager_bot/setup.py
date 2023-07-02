@@ -32,7 +32,8 @@ setup(
             "map_recorder = inventory_manager_bot.map_recorder:main",
             "path_planner_server = inventory_manager_bot.path_planner_server:main",
             "control_logger = inventory_manager_bot.controller_logger:main",
-            "waypoint_publisher = inventory_manager_bot.waypoint_publisher:main"
+            "waypoint_publisher = inventory_manager_bot.waypoint_publisher:main",
+            "area_bounds = inventory_manager_bot.area_bounds:main"
         ],
     },
 )

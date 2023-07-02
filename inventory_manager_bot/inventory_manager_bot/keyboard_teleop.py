@@ -23,17 +23,13 @@ class KeyboardTeleopNode(Node):
             print("\n")
             key = input('Enter key: ')
             if key == 'w':
-                if self.linear_x < self.max and self.linear_x >=0:
-                    self.linear_x = 70
+                self.linear_x = 60
             elif key == 's':
-                if self.linear_x < self.max and self.linear_x >=0:
-                    self.linear_x  = -70
+                self.linear_x  = -60
             elif key == 'a':
-                if self.angular_z < self.max and self.angular_z >=0:
-                    self.angular_z = -200
+                self.angular_z = -100
             elif key == 'd':
-                if self.angular_z < self.max and self.angular_z >=0:
-                    self.angular_z = 200
+                self.angular_z = 100
             else:
                 self.linear_x = 0
                 self.angular_z = 0

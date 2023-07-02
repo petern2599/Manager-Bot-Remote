@@ -19,25 +19,46 @@ class StaticBroadcasterNode(Node):
         self.get_logger().info("Static Broadcaster Node Started")
         
     def make_transforms(self):
-        transform_stamp = TransformStamped()
 
-        transform_stamp.header.stamp = self.get_clock().now().to_msg()
-        transform_stamp.header.frame_id = "base_footprint"
-        transform_stamp.child_frame_id = "laser"
+        # transform_stamp1 = TransformStamped()
 
-        transform_stamp.transform.translation.x = -0.01337
-        transform_stamp.transform.translation.y = 0.0
-        transform_stamp.transform.translation.z = 0.0
+        # transform_stamp1.header.stamp = self.get_clock().now().to_msg()
+        # transform_stamp1.header.frame_id = "base_link"
+        # transform_stamp1.child_frame_id = "base_footprint"
+
+        # transform_stamp1.transform.translation.x = 0.0
+        # transform_stamp1.transform.translation.y = 0.0
+        # transform_stamp1.transform.translation.z = 0.0
+
+        # rot1 = Rotation.from_euler('xyz',[0,0,0],degrees=True)
+
+        # rot_quat1 = rot1.as_quat()
+        # transform_stamp1.transform.rotation.x = rot_quat1[0]
+        # transform_stamp1.transform.rotation.y = rot_quat1[1]
+        # transform_stamp1.transform.rotation.z = rot_quat1[2]
+        # transform_stamp1.transform.rotation.w = rot_quat1[3]
+        
+        # self.static_broadcaster.sendTransform(transform_stamp1)
+
+        transform_stamp2 = TransformStamped()
+
+        transform_stamp2.header.stamp = self.get_clock().now().to_msg()
+        transform_stamp2.header.frame_id = "base_footprint"
+        transform_stamp2.child_frame_id = "laser"
+
+        transform_stamp2.transform.translation.x = -0.01337
+        transform_stamp2.transform.translation.y = 0.0
+        transform_stamp2.transform.translation.z = 0.0
 
         rot2 = Rotation.from_euler('xyz',[0,0,0],degrees=True)
 
         rot_quat2 = rot2.as_quat()
-        transform_stamp.transform.rotation.x = rot_quat2[0]
-        transform_stamp.transform.rotation.y = rot_quat2[1]
-        transform_stamp.transform.rotation.z = rot_quat2[2]
-        transform_stamp.transform.rotation.w = rot_quat2[3]
+        transform_stamp2.transform.rotation.x = rot_quat2[0]
+        transform_stamp2.transform.rotation.y = rot_quat2[1]
+        transform_stamp2.transform.rotation.z = rot_quat2[2]
+        transform_stamp2.transform.rotation.w = rot_quat2[3]
         
-        self.static_broadcaster.sendTransform(transform_stamp)
+        self.static_broadcaster.sendTransform(transform_stamp2)
 
 
 def main(args=None):
